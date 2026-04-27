@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pustak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --surface: #121212;
+            --on-surface: #E6E1E5;
+            --on-surface-variant: #CAC4D0;
+            --primary: #D0BCFF;
+            --primary-container: #4F378B;
+            --outline: #938F99;
+            --surface-container: #1C1B1F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface);
+            color: var(--on-surface);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--surface-container);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            padding: 60px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Glassmorphism accent */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            color: var(--on-surface);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            opacity: 0.6;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--outline);
+            opacity: 0.2;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--on-surface-variant);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--on-surface-variant);
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            opacity: 0.6;
+        }
+
+        .highlight-box {
+            background: var(--primary-container);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            border: 1px solid rgba(208, 188, 255, 0.2);
+        }
+
+        .highlight-box p {
+            color: var(--on-surface);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            opacity: 0.5;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+                border-radius: 0;
+            }
+            h1 { font-size: 32px; }
+            body { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="logo">Pustak</span>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: April 27, 2026</p>
+        </header>
+
+        <section>
+            <p>Pustak is a community-driven initiative dedicated to making education accessible. We believe that privacy is a fundamental right, especially for students and educators. This policy explains how we handle your information.</p>
+        </section>
+
+        <div class="highlight-box">
+            <p>TL;DR: We do not collect, store, or sell your personal data. Everything you do in Pustak stays on your own device.</p>
+        </div>
+
+        <section>
+            <h2>1. No Personal Data Collection</h2>
+            <p>Pustak does not require an account to use. We do not collect your name, email address, phone number, or any other personally identifiable information (PII).</p>
+        </section>
+
+        <section>
+            <h2>2. Local-Only Storage</h2>
+            <p>Your textbook library, reading progress, custom book bundles, and app preferences are stored exclusively in your browser's local storage (IndexedDB). This data never leaves your device and is not accessible to us or any third party.</p>
+        </section>
+
+        <section>
+            <h2>3. Third-Party Services</h2>
+            <p>To provide you with educational content, Pustak communicates with the following external domains:</p>
+            <ul>
+                <li><strong>NCERT (ncert.nic.in):</strong> We fetch textbook PDFs and covers directly from the official NCERT servers.</li>
+                <li><strong>Supabase:</strong> We fetch the book catalog and search index from our secure database to keep your library updated.</li>
+            </ul>
+            <p>These services may receive technical information like your IP address, which is standard for any web request, but they do not receive any personal data from Pustak.</p>
+        </section>
+
+        <section>
+            <h2>4. Permissions Usage</h2>
+            <p>We only ask for permissions that are strictly necessary for the app to function. For example, "Unlimited Storage" is used to save your books for offline reading, and "Alarms" is used to keep your catalog synchronized in the background.</p>
+        </section>
+
+        <section>
+            <h2>5. No Tracking or Analytics</h2>
+            <p>We do not use any tracking pixels, third-party cookies, or invasive analytics. We have no interest in tracking your study habits or browsing history.</p>
+        </section>
+
+        <section>
+            <h2>6. Changes to This Policy</h2>
+            <p>We may update this policy from time to time to reflect changes in our practices or for legal reasons. Any updates will be posted on this page.</p>
+        </section>
+
+        <footer>
+            <p>Pustak - A Community Initiative for NCERT Education</p>
+            <p>Independent Project • Not Affiliated with NCERT</p>
+        </footer>
+    </div>
+</body>
+</html>
