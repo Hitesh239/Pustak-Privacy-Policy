@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Pustak</title>
+    <title>Privacy Center — House of 2 Studio</title>
+    <!-- Google Fonts Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --surface: #121212;
-            --on-surface: #E6E1E5;
-            --on-surface-variant: #CAC4D0;
-            --primary: #D0BCFF;
-            --primary-container: #4F378B;
-            --outline: #938F99;
-            --surface-container: #1C1B1F;
+            --md-sys-color-background: #141218;
+            --md-sys-color-surface: #1C1B1F;
+            --md-sys-color-surface-container: #25232A;
+            --md-sys-color-surface-container-high: #2B2930;
+            --md-sys-color-on-surface: #E6E1E5;
+            --md-sys-color-on-surface-variant: #CAC4D0;
+            --md-sys-color-primary: #D0BCFF;
+            --md-sys-color-on-primary: #381E72;
+            --md-sys-color-primary-container: #4F378B;
+            --md-sys-color-on-primary-container: #EADDFF;
+            --md-sys-color-outline: #938F99;
+            --md-sys-color-outline-variant: #49454F;
+            --badge-chrome: #D0BCFF;
+            --badge-chrome-bg: rgba(208, 188, 255, 0.12);
+            --badge-android: #81C784;
+            --badge-android-bg: rgba(129, 199, 132, 0.12);
         }
 
         * {
@@ -26,209 +37,364 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--surface);
-            color: var(--on-surface);
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            padding: 40px 20px;
+            flex-direction: column;
         }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: var(--surface-container);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 28px;
-            padding: 60px;
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--md-sys-color-surface);
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
         }
 
-        /* Glassmorphism accent */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: var(--primary);
-            filter: blur(150px);
-            opacity: 0.05;
-            pointer-events: none;
+        .top-bar-content {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        header {
-            margin-bottom: 48px;
-            text-align: center;
-        }
-
-        .logo {
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--md-sys-color-primary);
             font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+        }
+
+        .brand-link span {
+            background: linear-gradient(135deg, #D0BCFF 0%, #EFB8C8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .support-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface-variant);
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background-color: var(--md-sys-color-surface-container);
+            border: 1px solid var(--md-sys-color-outline-variant);
+            transition: all 0.2s ease;
+        }
+
+        .support-link:hover {
+            color: #fff;
+            background-color: var(--md-sys-color-surface-container-high);
+            border-color: var(--md-sys-color-primary);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 960px;
+            margin: 3rem auto 4rem;
+            padding: 0 1.5rem;
+            flex: 1;
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 16px;
+            background-color: rgba(208, 188, 255, 0.1);
+            color: var(--md-sys-color-primary);
+            border: 1px solid rgba(208, 188, 255, 0.25);
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
-            font-size: 32px;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            display: block;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
         }
 
         h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 40px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--md-sys-color-on-surface);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--md-sys-color-on-surface-variant);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: var(--md-sys-color-surface-container);
+            color: var(--md-sys-color-on-surface-variant);
+            border: 1px solid var(--md-sys-color-outline-variant);
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-size: 0.9rem;
             font-weight: 500;
-            color: var(--on-surface);
-            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--md-sys-color-surface-container-high);
+            color: #fff;
+        }
+
+        .tab-btn.active {
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            border-color: var(--md-sys-color-primary);
+            font-weight: 600;
+        }
+
+        /* Grid */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card */
+        .policy-card {
+            background-color: var(--md-sys-color-surface-container);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 24px;
+            padding: 2rem 1.75rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--md-sys-color-primary);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-chrome-tag {
+            background-color: var(--badge-chrome-bg);
+            color: var(--badge-chrome);
+            border: 1px solid rgba(208, 188, 255, 0.25);
+        }
+
+        .badge-android-tag {
+            background-color: var(--badge-android-bg);
+            color: var(--badge-android);
+            border: 1px solid rgba(129, 199, 132, 0.25);
+        }
+
+        .policy-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.6rem;
             letter-spacing: -0.01em;
         }
 
-        .last-updated {
-            font-size: 14px;
-            color: var(--on-surface-variant);
-            opacity: 0.6;
+        .policy-card p {
+            font-size: 0.9rem;
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
         }
 
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            color: var(--primary);
-            margin-bottom: 16px;
+        .card-footer {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-
-        h2::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--outline);
-            opacity: 0.2;
-        }
-
-        p {
-            font-size: 16px;
-            color: var(--on-surface-variant);
-            margin-bottom: 16px;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 16px;
-        }
-
-        li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            color: var(--on-surface-variant);
-        }
-
-        li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            opacity: 0.6;
-        }
-
-        .highlight-box {
-            background: var(--primary-container);
-            border-radius: 16px;
-            padding: 24px;
-            margin: 32px 0;
-            border: 1px solid rgba(208, 188, 255, 0.2);
-        }
-
-        .highlight-box p {
-            color: var(--on-surface);
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 32px;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--md-sys-color-primary);
+            padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .policy-card:hover .card-arrow {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        footer {
             text-align: center;
-            font-size: 14px;
-            color: var(--on-surface-variant);
-            opacity: 0.5;
+            padding: 3rem 1.5rem;
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--md-sys-color-outline-variant);
+            background-color: var(--md-sys-color-surface);
+        }
+
+        footer a {
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 30px;
-                border-radius: 0;
-            }
-            h1 { font-size: 32px; }
-            body { padding: 0; }
+            h1 { font-size: 2.1rem; }
+            .policy-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <span class="logo">Pustak</span>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: April 27, 2026</p>
-        </header>
 
-        <section>
-            <p>Pustak is a community-driven initiative dedicated to making education accessible. We believe that privacy is a fundamental right, especially for students and educators. This policy explains how we handle your information.</p>
-        </section>
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <a href="./" class="brand-link">
+                <span>House of 2 Legal</span>
+            </a>
+            <a href="mailto:support@houseof2.studio" class="support-link">
+                Support &amp; Contact
+            </a>
+        </div>
+    </header>
 
-        <div class="highlight-box">
-            <p>TL;DR: We do not collect, store, or sell your personal data. Everything you do in Pustak stays on your own device.</p>
+    <main>
+        <div class="hero">
+            <span class="hero-badge">Official Trust &amp; Privacy Portal</span>
+            <h1>Privacy &amp; Data Policies</h1>
+            <p class="hero-subtitle">Comprehensive data handling disclosures, store compliance policies, and terms for all House of 2 products.</p>
         </div>
 
-        <section>
-            <h2>1. No Personal Data Collection</h2>
-            <p>Pustak does not require an account to use. We do not collect your name, email address, phone number, or any other personally identifiable information (PII).</p>
-        </section>
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterCategory('all')">All Products</button>
+            <button class="tab-btn" onclick="filterCategory('chrome')">Chrome Extensions</button>
+            <button class="tab-btn" onclick="filterCategory('android')">Android Apps</button>
+        </div>
 
-        <section>
-            <h2>2. Local-Only Storage</h2>
-            <p>Your textbook library, reading progress, custom book bundles, and app preferences are stored exclusively in your browser's local storage (IndexedDB). This data never leaves your device and is not accessible to us or any third party.</p>
-        </section>
+        <div class="policy-grid">
+            <!-- Pustak Chrome Extension -->
+            <a href="pustak-chrome-extension/" class="policy-card" data-category="chrome">
+                <div>
+                    <div class="card-header">
+                        <span class="card-badge badge-chrome-tag">🌐 Chrome Extension</span>
+                    </div>
+                    <h2>Pustak — NCERT Digital Library</h2>
+                    <p>Offline-first NCERT reader with multi-chapter stitching, SQLite indexing, and zero personal telemetry.</p>
+                </div>
+                <div class="card-footer">
+                    <span>View Chrome Web Store Policy</span>
+                    <span class="card-arrow">&rarr;</span>
+                </div>
+            </a>
 
-        <section>
-            <h2>3. Third-Party Services</h2>
-            <p>To provide you with educational content, Pustak communicates with the following external domains:</p>
-            <ul>
-                <li><strong>NCERT (ncert.nic.in):</strong> We fetch textbook PDFs and covers directly from the official NCERT servers.</li>
-                <li><strong>Supabase:</strong> We fetch the book catalog and search index from our secure database to keep your library updated.</li>
-            </ul>
-            <p>These services may receive technical information like your IP address, which is standard for any web request, but they do not receive any personal data from Pustak.</p>
-        </section>
+            <!-- Constitution of India: Bare Act -->
+            <a href="coi-bareact/" class="policy-card" data-category="android">
+                <div>
+                    <div class="card-header">
+                        <span class="card-badge badge-android-tag">📱 Android App</span>
+                    </div>
+                    <h2>Constitution of India: Bare Act</h2>
+                    <p>Comprehensive offline bare act reference tool with search, bookmarks, and non-intrusive AdMob disclosures.</p>
+                </div>
+                <div class="card-footer">
+                    <span>View Android Policy</span>
+                    <span class="card-arrow">&rarr;</span>
+                </div>
+            </a>
 
-        <section>
-            <h2>4. Permissions Usage</h2>
-            <p>We only ask for permissions that are strictly necessary for the app to function. For example, "Unlimited Storage" is used to save your books for offline reading, and "Alarms" is used to keep your catalog synchronized in the background.</p>
-        </section>
+            <!-- Pustak Android App -->
+            <a href="pustak-android/" class="policy-card" data-category="android">
+                <div>
+                    <div class="card-header">
+                        <span class="card-badge badge-android-tag">📱 Android App</span>
+                    </div>
+                    <h2>Pustak — NCERT Books Reader</h2>
+                    <p>Android mobile reader for NCERT curriculum textbooks with local storage and Google Play safety disclosures.</p>
+                </div>
+                <div class="card-footer">
+                    <span>View Android Policy</span>
+                    <span class="card-arrow">&rarr;</span>
+                </div>
+            </a>
+        </div>
+    </main>
 
-        <section>
-            <h2>5. No Tracking or Analytics</h2>
-            <p>We do not use any tracking pixels, third-party cookies, or invasive analytics. We have no interest in tracking your study habits or browsing history.</p>
-        </section>
+    <footer>
+        <p>&copy; 2026 House of 2 Studio • All Rights Reserved</p>
+        <p style="margin-top: 6px; opacity: 0.7;">Inquiries: <a href="mailto:support@houseof2.studio">support@houseof2.studio</a> | <a href="mailto:hello@pustak.app">hello@pustak.app</a></p>
+    </footer>
 
-        <section>
-            <h2>6. Changes to This Policy</h2>
-            <p>We may update this policy from time to time to reflect changes in our practices or for legal reasons. Any updates will be posted on this page.</p>
-        </section>
+    <script>
+        function filterCategory(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const cards = document.querySelectorAll('.policy-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
-        <footer>
-            <p>Pustak - A Community Initiative for NCERT Education</p>
-            <p>Independent Project • Not Affiliated with NCERT</p>
-        </footer>
-    </div>
 </body>
 </html>

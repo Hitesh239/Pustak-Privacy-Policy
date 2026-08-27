@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pustak Chrome Extension</title>
+    <!-- Google Fonts Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --md-sys-color-background: #141218;
+            --md-sys-color-surface: #1C1B1F;
+            --md-sys-color-surface-container: #25232A;
+            --md-sys-color-surface-container-high: #2B2930;
+            --md-sys-color-on-surface: #E6E1E5;
+            --md-sys-color-on-surface-variant: #CAC4D0;
+            --md-sys-color-primary: #D0BCFF;
+            --md-sys-color-on-primary: #381E72;
+            --md-sys-color-primary-container: #4F378B;
+            --md-sys-color-on-primary-container: #EADDFF;
+            --md-sys-color-outline: #938F99;
+            --md-sys-color-outline-variant: #49454F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top App Bar */
+        .top-bar {
+            background-color: var(--md-sys-color-surface);
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .top-bar-content {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--md-sys-color-primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .back-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface-variant);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background-color: var(--md-sys-color-surface-container);
+            border: 1px solid var(--md-sys-color-outline-variant);
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            background-color: var(--md-sys-color-surface-container-high);
+            border-color: var(--md-sys-color-primary);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 860px;
+            margin: 2.5rem auto 4rem;
+            padding: 0 1.5rem;
+        }
+
+        /* Header Hero */
+        .hero {
+            background: linear-gradient(180deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface) 100%);
+            border-radius: 28px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            background: var(--md-sys-color-primary);
+            filter: blur(100px);
+            opacity: 0.12;
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 14px;
+            background-color: rgba(208, 188, 255, 0.12);
+            color: var(--md-sys-color-primary);
+            border: 1px solid rgba(208, 188, 255, 0.25);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--md-sys-color-on-surface);
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            font-size: 0.85rem;
+            color: var(--md-sys-color-on-surface-variant);
+            opacity: 0.7;
+        }
+
+        /* Highlight Guarantee Card */
+        .guarantee-card {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(208, 188, 255, 0.3);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .guarantee-card-icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+
+        .guarantee-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
+            color: #fff;
+        }
+
+        .guarantee-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--md-sys-color-on-primary-container);
+            margin: 0;
+        }
+
+        /* Sections */
+        section {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 24px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--md-sys-color-primary);
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--md-sys-color-outline-variant);
+            opacity: 0.4;
+        }
+
+        p {
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 0.75rem;
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 6px;
+            color: var(--md-sys-color-primary);
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        code {
+            background-color: rgba(255, 255, 255, 0.07);
+            color: var(--md-sys-color-primary);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        a {
+            color: var(--md-sys-color-primary);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--md-sys-color-outline-variant);
+            background-color: var(--md-sys-color-surface);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 2rem 1.5rem; border-radius: 20px; }
+            h1 { font-size: 1.8rem; }
+            section { padding: 1.5rem; border-radius: 18px; }
+            .guarantee-card { padding: 1.25rem; border-radius: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <a href="../" class="brand-link">
+                <span>Pustak Legal</span>
+            </a>
+            <a href="../" class="back-link">
+                &larr; All Privacy Policies
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <span class="badge">Chrome Web Store Certified</span>
+            <h1>Pustak — NCERT Offline Digital Library</h1>
+            <p class="subtitle">Official Privacy Policy &amp; Single-Purpose User Data Disclosures for Chrome Extension</p>
+            <p class="last-updated">Last Updated: August 27, 2026</p>
+        </div>
+
+        <div class="guarantee-card">
+            <div class="guarantee-card-icon">🛡️</div>
+            <div>
+                <h3>Zero Data Collection Guarantee</h3>
+                <p>Pustak is built with an offline-first architecture. We do not track, collect, transmit, or sell your personal data. All your highlights, bookmarks, reading positions, and downloaded textbooks remain 100% stored on your local computer.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>1. Information We Do NOT Collect</h2>
+            <p>Pustak does not require user accounts, logins, or registration. We do not collect or process:</p>
+            <ul>
+                <li><strong>Personally Identifiable Information (PII):</strong> Full name, email address, physical address, or phone number.</li>
+                <li><strong>Browsing &amp; Activity Telemetry:</strong> Browsing history, visited websites, or search queries outside of Pustak's local catalog.</li>
+                <li><strong>Tracking Identifiers:</strong> Third-party tracking cookies, advertising IDs, or digital fingerprints.</li>
+                <li><strong>Financial or Authentication Data:</strong> Credit card numbers, payment details, or passwords.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Local Data Processing &amp; Storage</h2>
+            <p>Pustak processes only operational data strictly necessary to deliver textbook reading and chapter stitching functions:</p>
+            <ul>
+                <li><strong>Offline Textbook Files:</strong> Downloaded NCERT textbook PDFs are stored locally on your device (via browser <code>IndexedDB</code> and <code>Origin Private File System (OPFS)</code>) for instant offline reading.</li>
+                <li><strong>Study Annotations:</strong> Highlights, page bookmarks, reading progress, and display settings (such as AMOLED Dark mode, font scaling, and two-page spread) are saved locally to preserve your study state.</li>
+                <li><strong>Local Full-Text Search:</strong> Search queries are matched locally against pre-compiled SQLite textbook indexes; queries are never transmitted to any external server.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Third-Party Endpoints &amp; Network Requests</h2>
+            <p>To access public educational textbooks and verify catalog revisions, the extension communicates strictly with the following endpoints:</p>
+            <ul>
+                <li><strong>NCERT Official Servers (<code>ncert.nic.in</code>):</strong> Fetches official, public NCERT textbook chapters, cover images, and curriculum documents.</li>
+                <li><strong>Supabase Database (<code>qsgdijvhaljrzelwziuy.supabase.co</code>):</strong> Fetches updated textbook metadata and curriculum catalog lists.</li>
+            </ul>
+            <p>These requests do not send any user profiles, personal identifiers, or study analytics to these remote servers.</p>
+        </section>
+
+        <section>
+            <h2>4. Data Retention &amp; User Deletion Rights</h2>
+            <p>Because all data resides exclusively in your browser's sandboxed storage, you have complete control over its retention:</p>
+            <ul>
+                <li><strong>Retention Duration:</strong> Data is retained in local storage until you choose to delete or clear it.</li>
+                <li><strong>User Deletion:</strong> You can permanently wipe all downloaded books, bookmarks, highlights, and cached files at any time by clearing site data in your browser settings or removing the extension from <code>chrome://extensions</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Data Sharing, Sale &amp; Limited Use Disclosures</h2>
+            <p>In compliance with the Google Chrome Web Store Developer Program Policies and Limited Use Requirements:</p>
+            <ul>
+                <li>We do <strong>NOT</strong> sell, trade, or rent user data to third parties under any circumstances.</li>
+                <li>We do <strong>NOT</strong> transfer user data to advertising platforms, data brokers, or marketing networks.</li>
+                <li>We do <strong>NOT</strong> use or transfer user data to determine creditworthiness or for lending purposes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Chrome Permissions Justification</h2>
+            <p>The extension requests only the minimum required permissions necessary for its single purpose:</p>
+            <ul>
+                <li><code>unlimitedStorage</code>: Stores high-resolution textbook PDFs locally for offline study without browser quota evictions.</li>
+                <li><code>tabs</code> &amp; <code>tabGroups</code>: Opens textbook chapters into organized browser tab groups ("Pustak Pathshala").</li>
+                <li><code>offscreen</code>: Runs background PDF decompression and SQLite search indexing without blocking the UI thread.</li>
+                <li><code>downloads</code>: Enables students to save stitched multi-chapter PDF books to their local disk.</li>
+                <li><code>declarativeNetRequest</code>: Attaches required referer headers to fetch official NCERT educational files without anti-hotlinking network blocks.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Contact Information</h2>
+            <p>If you have any questions or feedback regarding this Privacy Policy, please reach out to our team:</p>
+            <p>📩 <strong>Email:</strong> <a href="mailto:hello@pustak.app">hello@pustak.app</a> or <a href="mailto:support@houseof2.studio">support@houseof2.studio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 House of 2 Studio • Pustak Community Initiative</p>
+        <p>Independent Educational Project • Not Affiliated with NCERT</p>
+    </footer>
+
+</body>
+</html>
