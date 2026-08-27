@@ -4,398 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy • Pustak Chrome Extension</title>
-    <!-- Google Fonts: Plus Jakarta Sans, Outfit, Inter & Material Symbols Rounded -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
-    <style>
-        :root {
-            /* 
-             * Gemini Notebook & Material 3 Official Design Tokens (Exact Pustak Extension Palette)
-             */
-            --md-sys-color-surface: #131314;
-            --md-sys-color-surface-dim: #0E0E0F;
-            --md-sys-color-surface-bright: #1E1F20;
-            --md-sys-color-surface-container-lowest: #0E0E0F;
-            --md-sys-color-surface-container-low: #18191A;
-            --md-sys-color-surface-container: #1E1F20;
-            --md-sys-color-surface-container-high: #282A2C;
-            --md-sys-color-surface-container-highest: #333538;
-
-            /* Primary Accent: Google Ice Blue */
-            --md-sys-color-primary: #A8C7FA;
-            --md-sys-color-on-primary: #042B59;
-            --md-sys-color-primary-container: #0842A0;
-            --md-sys-color-on-primary-container: #D3E3FD;
-
-            /* Secondary & Tertiary */
-            --md-sys-color-secondary: #C4C7C5;
-            --md-sys-color-on-secondary: #2D312E;
-            --md-sys-color-secondary-container: #282A2C;
-            --md-sys-color-on-secondary-container: #E3E3E3;
-
-            --md-sys-color-tertiary: #C2E7FF;
-            --md-sys-color-on-tertiary: #003351;
-            --md-sys-color-tertiary-container: #004D73;
-            --md-sys-color-on-tertiary-container: #C2E7FF;
-
-            /* Typography Colors */
-            --md-sys-color-on-surface: #E3E3E3;
-            --md-sys-color-on-surface-variant: #C4C7C5;
-            --md-sys-color-outline: #8E918F;
-            --md-sys-color-outline-variant: #282A2C;
-
-            --font-brand: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-plain: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            font-family: var(--font-plain);
-            background-color: var(--md-sys-color-surface);
-            color: var(--md-sys-color-on-surface);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Material Symbols helper */
-        .material-symbols-rounded {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        .material-symbols-rounded.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        /* Minimalist Top App Bar */
-        .top-bar {
-            height: 64px;
-            background-color: var(--md-sys-color-surface-container);
-            border-bottom: 1px solid var(--md-sys-color-outline-variant);
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(16px);
-        }
-
-        .top-bar-inner {
-            max-width: 900px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--md-sys-color-on-surface);
-        }
-
-        .brand-logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #A8C7FA 0%, #0842A0 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
-
-        .brand-title {
-            font-family: var(--font-brand);
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .back-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            height: 36px;
-            padding: 0 16px;
-            border-radius: 9999px;
-            background-color: var(--md-sys-color-surface-container-high);
-            border: 1px solid var(--md-sys-color-outline-variant);
-            color: var(--md-sys-color-on-surface);
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-        }
-
-        .back-pill:hover {
-            background-color: var(--md-sys-color-surface-container-highest);
-            border-color: var(--md-sys-color-primary);
-            color: var(--md-sys-color-primary);
-            transform: translateX(-2px);
-        }
-
-        /* Main Container */
-        main {
-            max-width: 900px;
-            width: 100%;
-            margin: 32px auto 64px;
-            padding: 0 20px;
-            flex: 1;
-        }
-
-        /* Hero Banner */
-        .hero-banner {
-            background-color: var(--md-sys-color-surface-container-low);
-            border: 1px solid var(--md-sys-color-outline-variant);
-            border-radius: 24px;
-            padding: 40px 36px;
-            margin-bottom: 24px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-banner::after {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 240px;
-            height: 240px;
-            background: radial-gradient(circle, rgba(168, 199, 250, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .status-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            background-color: rgba(168, 199, 250, 0.12);
-            border: 1px solid rgba(168, 199, 250, 0.3);
-            color: var(--md-sys-color-primary);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-bottom: 16px;
-        }
-
-        h1 {
-            font-family: var(--font-brand);
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--md-sys-color-on-surface);
-            letter-spacing: -0.02em;
-            line-height: 1.25;
-            margin-bottom: 8px;
-        }
-
-        .hero-desc {
-            font-size: 15px;
-            color: var(--md-sys-color-on-surface-variant);
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .hero-date {
-            font-size: 13px;
-            color: var(--md-sys-color-on-surface-variant);
-            opacity: 0.7;
-        }
-
-        /* Trust / Zero Collection Callout Box */
-        .callout-box {
-            background-color: var(--md-sys-color-surface-container);
-            border: 1px solid rgba(168, 199, 250, 0.3);
-            border-radius: 18px;
-            padding: 20px 24px;
-            margin-bottom: 24px;
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-
-        .callout-icon {
-            color: var(--md-sys-color-primary);
-            font-size: 26px;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .callout-box h3 {
-            font-family: var(--font-brand);
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--md-sys-color-primary);
-            margin-bottom: 4px;
-        }
-
-        .callout-box p {
-            font-size: 14px;
-            color: var(--md-sys-color-on-surface);
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        /* Policy Section Cards */
-        .section-card {
-            background-color: var(--md-sys-color-surface-container-low);
-            border: 1px solid var(--md-sys-color-outline-variant);
-            border-radius: 20px;
-            padding: 28px 32px;
-            margin-bottom: 18px;
-            transition: border-color 0.2s ease;
-        }
-
-        .section-card:hover {
-            border-color: rgba(168, 199, 250, 0.3);
-        }
-
-        .section-title {
-            font-family: var(--font-brand);
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--md-sys-color-primary);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid var(--md-sys-color-outline-variant);
-            padding-bottom: 12px;
-        }
-
-        .section-title .material-symbols-rounded {
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 14.5px;
-            color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.6;
-            margin-bottom: 14px;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 14px;
-        }
-
-        li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            font-size: 14.5px;
-            color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.55;
-        }
-
-        li::before {
-            content: '•';
-            position: absolute;
-            left: 8px;
-            color: var(--md-sys-color-primary);
-            font-size: 16px;
-            line-height: 1;
-        }
-
-        code {
-            background-color: var(--md-sys-color-surface-container-high);
-            color: var(--md-sys-color-primary);
-            border: 1px solid var(--md-sys-color-outline-variant);
-            padding: 2px 7px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        }
-
-        a {
-            color: var(--md-sys-color-primary);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.15s ease;
-        }
-
-        a:hover {
-            color: #FFFFFF;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--md-sys-color-surface-container-lowest);
-            border-top: 1px solid var(--md-sys-color-outline-variant);
-            padding: 32px 24px;
-            text-align: center;
-            font-size: 13px;
-            color: var(--md-sys-color-on-surface-variant);
-            opacity: 0.8;
-        }
-
-        @media (max-width: 640px) {
-            .hero-banner { padding: 24px 20px; border-radius: 18px; }
-            h1 { font-size: 24px; }
-            .section-card { padding: 20px; border-radius: 16px; }
-            .top-bar { padding: 0 16px; }
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="top-bar-inner">
-            <a href="../" class="brand-group">
-                <div class="brand-logo-icon">
+    <div class="ambient-glow"></div>
+
+    <header class="m3-top-bar">
+        <div class="m3-top-bar-inner">
+            <a href="../" class="m3-brand-group">
+                <div class="m3-brand-logo">
                     <span class="material-symbols-rounded filled" style="font-size: 20px;">menu_book</span>
                 </div>
-                <span class="brand-title">Pustak Legal</span>
+                <span class="m3-brand-title">Pustak Legal</span>
             </a>
-            <a href="../" class="back-pill">
-                <span class="material-symbols-rounded" style="font-size: 16px;">arrow_back</span>
+            <a href="../" class="m3-nav-pill">
+                <span class="material-symbols-rounded" style="font-size: 18px;">arrow_back</span>
                 <span>All Policies</span>
             </a>
         </div>
     </header>
 
-    <main>
-        <div class="hero-banner">
-            <span class="status-chip">
+    <main class="m3-main-container">
+        <div class="m3-hero-card">
+            <span class="m3-badge m3-badge-chrome">
                 <span class="material-symbols-rounded filled" style="font-size: 14px;">verified</span>
                 Chrome Web Store Compliant
             </span>
-            <h1>Pustak — NCERT Offline Digital Library</h1>
-            <p class="hero-desc">Single-Purpose User Data Privacy Disclosures &amp; Local Storage Architecture</p>
-            <p class="hero-date">Last Updated: August 27, 2026</p>
+            <h1 class="m3-hero-title">Pustak — NCERT Offline Digital Library</h1>
+            <p class="m3-hero-subtitle">Single-Purpose User Data Privacy Disclosures &amp; Local Storage Architecture</p>
+            <p class="m3-hero-meta">Last Updated: August 27, 2026 • Chrome Manifest V3</p>
         </div>
 
-        <div class="callout-box">
-            <span class="material-symbols-rounded filled callout-icon">shield</span>
+        <div class="m3-callout">
+            <span class="material-symbols-rounded filled m3-callout-icon">shield</span>
             <div>
                 <h3>Zero Data Collection Guarantee</h3>
                 <p>Pustak is built with a strict offline-first architecture. We do not track, collect, transmit, or sell your personal data. All highlights, bookmarks, reading positions, and downloaded textbooks remain 100% stored on your local computer.</p>
             </div>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">block</span>
                 1. Information We Do NOT Collect
             </div>
@@ -408,8 +58,8 @@
             </ul>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">memory</span>
                 2. Local Data Processing &amp; Storage
             </div>
@@ -421,8 +71,8 @@
             </ul>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">cloud_sync</span>
                 3. Third-Party Endpoints &amp; Network Requests
             </div>
@@ -434,8 +84,8 @@
             <p>These requests do not send any user profiles, personal identifiers, or study analytics to these remote servers.</p>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">delete_sweep</span>
                 4. Data Retention &amp; User Deletion Rights
             </div>
@@ -446,8 +96,8 @@
             </ul>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">policy</span>
                 5. Data Sharing, Sale &amp; Limited Use Disclosures
             </div>
@@ -459,8 +109,8 @@
             </ul>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">security</span>
                 6. Chrome Permissions Justification
             </div>
@@ -474,8 +124,8 @@
             </ul>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">
+        <div class="m3-section-card">
+            <div class="m3-section-heading">
                 <span class="material-symbols-rounded">mail</span>
                 7. Contact Information
             </div>
