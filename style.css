@@ -1,12 +1,13 @@
 /* 
- * Material You (Material 3) Official Design System
- * Unified Google Ice Blue & Graphite Tonal Palette
+ * Official Pustak & Material You (Material 3) Design System
+ * Palette: Google Ice Blue (#A8C7FA) & Graphite (#131314)
+ * Typography: Plus Jakarta Sans, Outfit & Inter
  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
-  /* Surface Tones: Deep Charcoal / Graphite Canvas */
+  /* Surface Tones: Official Google Graphite Canvas & Slate Containers */
   --md-sys-color-surface: #131314;
   --md-sys-color-surface-dim: #0E0E0F;
   --md-sys-color-surface-bright: #1E1F20;
@@ -16,10 +17,10 @@
   --md-sys-color-surface-container-high: #282A2C;
   --md-sys-color-surface-container-highest: #333538;
 
-  /* Primary Tonal Accent: Google Ice Blue */
+  /* Primary Accent: Google Ice Blue */
   --md-sys-color-primary: #A8C7FA;
   --md-sys-color-on-primary: #042B59;
-  --md-sys-color-primary-container: #1B263B;
+  --md-sys-color-primary-container: #1A273D;
   --md-sys-color-on-primary-container: #D3E3FD;
 
   /* Secondary Neutral Tones */
@@ -28,19 +29,13 @@
   --md-sys-color-secondary-container: #282A2C;
   --md-sys-color-on-secondary-container: #E3E3E3;
 
-  /* Tertiary Cyan Tones */
-  --md-sys-color-tertiary: #C2E7FF;
-  --md-sys-color-on-tertiary: #003351;
-  --md-sys-color-tertiary-container: #004D73;
-  --md-sys-color-on-tertiary-container: #C2E7FF;
-
   /* Typography & Outlines */
   --md-sys-color-on-surface: #E3E3E3;
   --md-sys-color-on-surface-variant: #C4C7C5;
   --md-sys-color-outline: #8E918F;
   --md-sys-color-outline-variant: #282A2C;
 
-  /* Fonts */
+  /* Typography */
   --font-brand: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-plain: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -76,7 +71,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Material Symbols Rounded */
+/* Material Symbols Rounded Utility */
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   vertical-align: middle;
@@ -86,7 +81,14 @@ body {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Ambient Radial Glow (Ice Blue) */
+/* Bugdroid Android Vector Icon */
+.android-icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+/* Ambient Radial Glow */
 .ambient-glow {
   position: fixed;
   top: 0;
@@ -94,15 +96,15 @@ body {
   transform: translateX(-50%);
   width: 1000px;
   height: 600px;
-  background: radial-gradient(circle, rgba(168, 199, 250, 0.05) 0%, rgba(194, 231, 255, 0.02) 50%, transparent 75%);
+  background: radial-gradient(circle, rgba(168, 199, 250, 0.06) 0%, rgba(8, 66, 160, 0.02) 45%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* M3 Minimal Top App Bar */
+/* Top App Bar */
 .m3-top-bar {
   height: 64px;
-  background-color: rgba(19, 19, 20, 0.85);
+  background-color: rgba(19, 19, 20, 0.88);
   border-bottom: 1px solid var(--md-sys-color-outline-variant);
   display: flex;
   align-items: center;
@@ -110,8 +112,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .m3-top-bar-inner {
@@ -132,23 +134,23 @@ body {
 }
 
 .m3-brand-logo {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, #0842A0 100%);
-  border-radius: 8px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
-  font-family: var(--font-brand);
-  font-weight: 800;
-  font-size: 16px;
-  box-shadow: 0 2px 8px rgba(168, 199, 250, 0.2);
+}
+
+.m3-brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .m3-brand-title {
   font-family: var(--font-brand);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #FFFFFF;
@@ -207,7 +209,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(168, 199, 250, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(168, 199, 250, 0.4), transparent);
 }
 
 .m3-badge {
