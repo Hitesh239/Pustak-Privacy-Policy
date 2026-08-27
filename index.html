@@ -9,14 +9,14 @@
         .filter-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 36px;
+            margin-bottom: 32px;
         }
 
         .segmented-group {
             display: inline-flex;
             background-color: var(--md-sys-color-surface-container-low);
             border: 1px solid var(--md-sys-color-outline-variant);
-            padding: 5px;
+            padding: 4px;
             border-radius: var(--radius-full);
             gap: 4px;
         }
@@ -25,8 +25,8 @@
             background: transparent;
             color: var(--md-sys-color-on-surface-variant);
             border: none;
-            height: 38px;
-            padding: 0 22px;
+            height: 36px;
+            padding: 0 20px;
             border-radius: var(--radius-full);
             font-family: var(--font-plain);
             font-size: 13.5px;
@@ -34,7 +34,7 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
         }
 
@@ -45,21 +45,21 @@
 
         .segmented-btn.active {
             background-color: var(--md-sys-color-primary-container);
-            color: #FFFFFF;
+            color: var(--md-sys-color-primary);
             box-shadow: var(--shadow-sm);
         }
 
         .policy-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .policy-card {
-            background-color: var(--md-sys-color-surface-container);
+            background-color: var(--md-sys-color-surface-container-low);
             border: 1px solid var(--md-sys-color-outline-variant);
             border-radius: var(--radius-lg);
-            padding: 30px 26px;
+            padding: 28px 24px;
             text-decoration: none;
             color: inherit;
             display: flex;
@@ -70,70 +70,54 @@
             overflow: hidden;
         }
 
-        .policy-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(208, 188, 255, 0.25), transparent);
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-
         .policy-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             border-color: var(--md-sys-color-primary);
-            background-color: var(--md-sys-color-surface-container-high);
+            background-color: var(--md-sys-color-surface-container);
             box-shadow: var(--shadow-md);
-        }
-
-        .policy-card:hover::before {
-            opacity: 1;
         }
 
         .card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .policy-card h2 {
             font-family: var(--font-brand);
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
             color: #FFFFFF;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1.35;
         }
 
         .policy-card p {
             font-size: 14px;
             color: var(--md-sys-color-on-surface-variant);
-            margin-bottom: 26px;
-            line-height: 1.6;
+            margin-bottom: 24px;
+            line-height: 1.55;
         }
 
         .card-footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--md-sys-color-primary);
-            padding-top: 16px;
+            padding-top: 14px;
             border-top: 1px solid var(--md-sys-color-outline-variant);
         }
 
         .policy-card:hover .card-footer .material-symbols-rounded {
-            transform: translateX(4px);
+            transform: translateX(3px);
         }
 
         .card-footer .material-symbols-rounded {
             transition: transform 0.2s ease;
-            font-size: 20px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -156,27 +140,27 @@
 
     <main class="m3-main-container">
         <div class="m3-hero-card" style="text-align: center;">
-            <span class="m3-badge m3-badge-chrome">
+            <span class="m3-badge">
                 <span class="material-symbols-rounded filled" style="font-size: 14px;">verified_user</span>
                 Official Privacy &amp; Data Portal
             </span>
             <h1 class="m3-hero-title">Privacy &amp; Data Policies</h1>
-            <p class="m3-hero-subtitle" style="margin: 0 auto 16px;">Comprehensive data safety disclosures, store compliance standards, and user data rights across all House of 2 products.</p>
+            <p class="m3-hero-subtitle" style="margin: 0 auto 12px;">Comprehensive data safety disclosures, store compliance standards, and user data rights across all House of 2 products.</p>
             <p class="m3-hero-meta">Updated: August 27, 2026 • House of 2 Ecosystem</p>
         </div>
 
         <div class="filter-container">
             <div class="segmented-group">
                 <button class="segmented-btn active" onclick="filterCategory('all', this)">
-                    <span class="material-symbols-rounded" style="font-size: 17px;">apps</span>
+                    <span class="material-symbols-rounded" style="font-size: 16px;">apps</span>
                     <span>All Products</span>
                 </button>
                 <button class="segmented-btn" onclick="filterCategory('chrome', this)">
-                    <span class="material-symbols-rounded" style="font-size: 17px;">extension</span>
+                    <span class="material-symbols-rounded" style="font-size: 16px;">extension</span>
                     <span>Chrome Extensions</span>
                 </button>
                 <button class="segmented-btn" onclick="filterCategory('android', this)">
-                    <span class="material-symbols-rounded" style="font-size: 17px;">phone_android</span>
+                    <span class="material-symbols-rounded" style="font-size: 16px;">phone_android</span>
                     <span>Android Apps</span>
                 </button>
             </div>
@@ -187,7 +171,7 @@
             <a href="pustak-chrome-extension/" class="policy-card" data-category="chrome">
                 <div>
                     <div class="card-header">
-                        <span class="m3-badge m3-badge-chrome">
+                        <span class="m3-badge">
                             <span class="material-symbols-rounded filled" style="font-size: 13px;">extension</span>
                             Chrome Extension
                         </span>
@@ -205,7 +189,7 @@
             <a href="coi-bareact/" class="policy-card" data-category="android">
                 <div>
                     <div class="card-header">
-                        <span class="m3-badge m3-badge-android">
+                        <span class="m3-badge">
                             <span class="material-symbols-rounded filled" style="font-size: 13px;">phone_android</span>
                             Android App
                         </span>
@@ -214,8 +198,8 @@
                     <p>Clean legal reference reader for Indian Constitution articles, amendments, and landmark judgments with sandboxed local storage.</p>
                 </div>
                 <div class="card-footer">
-                    <span style="color: var(--md-sys-color-android);">View Android Policy</span>
-                    <span class="material-symbols-rounded" style="color: var(--md-sys-color-android);">arrow_forward</span>
+                    <span>View Android Policy</span>
+                    <span class="material-symbols-rounded">arrow_forward</span>
                 </div>
             </a>
 
@@ -223,7 +207,7 @@
             <a href="pustak-android/" class="policy-card" data-category="android">
                 <div>
                     <div class="card-header">
-                        <span class="m3-badge m3-badge-android">
+                        <span class="m3-badge">
                             <span class="material-symbols-rounded filled" style="font-size: 13px;">phone_android</span>
                             Android App
                         </span>
@@ -232,8 +216,8 @@
                     <p>Mobile reader for NCERT textbooks with offline downloads, bookmarks, and Google Play Data Safety compliance.</p>
                 </div>
                 <div class="card-footer">
-                    <span style="color: var(--md-sys-color-android);">View Android Policy</span>
-                    <span class="material-symbols-rounded" style="color: var(--md-sys-color-android);">arrow_forward</span>
+                    <span>View Android Policy</span>
+                    <span class="material-symbols-rounded">arrow_forward</span>
                 </div>
             </a>
         </div>
@@ -241,7 +225,7 @@
 
     <footer>
         <p>&copy; 2026 House of 2 Studio • All Rights Reserved</p>
-        <p style="margin-top: 8px; opacity: 0.7;">Support &amp; Inquiries: <a href="mailto:support@houseof2.studio">support@houseof2.studio</a></p>
+        <p style="margin-top: 6px; opacity: 0.7;">Support &amp; Inquiries: <a href="mailto:support@houseof2.studio">support@houseof2.studio</a></p>
     </footer>
 
     <script>

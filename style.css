@@ -1,57 +1,56 @@
 /* 
  * Material You (Material 3) Official Design System
- * Pustak & House of 2 Ecosystem
+ * Unified Google Ice Blue & Graphite Tonal Palette
  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
-  /* M3 Surface Tones (Deep Graphite Canvas & Slate Containers) */
-  --md-sys-color-surface: #0A0A0C;
-  --md-sys-color-surface-dim: #070709;
-  --md-sys-color-surface-bright: #1A1A1E;
-  --md-sys-color-surface-container-lowest: #070709;
-  --md-sys-color-surface-container-low: #0F0D13;
-  --md-sys-color-surface-container: #141218;
-  --md-sys-color-surface-container-high: #1D1B22;
-  --md-sys-color-surface-container-highest: #282530;
+  /* Surface Tones: Deep Charcoal / Graphite Canvas */
+  --md-sys-color-surface: #131314;
+  --md-sys-color-surface-dim: #0E0E0F;
+  --md-sys-color-surface-bright: #1E1F20;
+  --md-sys-color-surface-container-lowest: #0E0E0F;
+  --md-sys-color-surface-container-low: #18191A;
+  --md-sys-color-surface-container: #1E1F20;
+  --md-sys-color-surface-container-high: #282A2C;
+  --md-sys-color-surface-container-highest: #333538;
 
-  /* Primary Accent: M3 Lavender / Ice Violet */
-  --md-sys-color-primary: #D0BCFF;
-  --md-sys-color-on-primary: #381E72;
-  --md-sys-color-primary-container: #4F378B;
-  --md-sys-color-on-primary-container: #EADDFF;
+  /* Primary Tonal Accent: Google Ice Blue */
+  --md-sys-color-primary: #A8C7FA;
+  --md-sys-color-on-primary: #042B59;
+  --md-sys-color-primary-container: #1B263B;
+  --md-sys-color-on-primary-container: #D3E3FD;
 
-  /* Secondary Accent */
-  --md-sys-color-secondary: #CCC2DC;
-  --md-sys-color-on-secondary: #332D41;
-  --md-sys-color-secondary-container: #4A4458;
-  --md-sys-color-on-secondary-container: #E8DEF8;
+  /* Secondary Neutral Tones */
+  --md-sys-color-secondary: #C4C7C5;
+  --md-sys-color-on-secondary: #2D312E;
+  --md-sys-color-secondary-container: #282A2C;
+  --md-sys-color-on-secondary-container: #E3E3E3;
 
-  /* Android Accent: Mint Green */
-  --md-sys-color-android: #81C784;
-  --md-sys-color-on-android: #00390A;
-  --md-sys-color-android-container: #1B5E20;
-  --md-sys-color-on-android-container: #C8E6C9;
+  /* Tertiary Cyan Tones */
+  --md-sys-color-tertiary: #C2E7FF;
+  --md-sys-color-on-tertiary: #003351;
+  --md-sys-color-tertiary-container: #004D73;
+  --md-sys-color-on-tertiary-container: #C2E7FF;
 
-  /* Typography Colors */
-  --md-sys-color-on-surface: #F0F0F2;
-  --md-sys-color-on-surface-variant: #A0A0AB;
-  --md-sys-color-outline: #4A4550;
-  --md-sys-color-outline-variant: rgba(255, 255, 255, 0.08);
+  /* Typography & Outlines */
+  --md-sys-color-on-surface: #E3E3E3;
+  --md-sys-color-on-surface-variant: #C4C7C5;
+  --md-sys-color-outline: #8E918F;
+  --md-sys-color-outline-variant: #282A2C;
 
   /* Fonts */
   --font-brand: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-plain: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Shadows & Radius */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
+  /* Shadows & Shapes */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
 }
 
@@ -77,7 +76,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Material Symbols Rounded Utility */
+/* Material Symbols Rounded */
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   vertical-align: middle;
@@ -87,7 +86,7 @@ body {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Ambient Radial Glow */
+/* Ambient Radial Glow (Ice Blue) */
 .ambient-glow {
   position: fixed;
   top: 0;
@@ -95,15 +94,15 @@ body {
   transform: translateX(-50%);
   width: 1000px;
   height: 600px;
-  background: radial-gradient(circle, rgba(208, 188, 255, 0.05) 0%, rgba(239, 184, 200, 0.02) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 199, 250, 0.05) 0%, rgba(194, 231, 255, 0.02) 50%, transparent 75%);
   pointer-events: none;
   z-index: 0;
 }
 
 /* M3 Minimal Top App Bar */
 .m3-top-bar {
-  height: 68px;
-  background-color: rgba(10, 10, 12, 0.85);
+  height: 64px;
+  background-color: rgba(19, 19, 20, 0.85);
   border-bottom: 1px solid var(--md-sys-color-outline-variant);
   display: flex;
   align-items: center;
@@ -111,12 +110,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .m3-top-bar-inner {
-  max-width: 960px;
+  max-width: 920px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -133,48 +132,46 @@ body {
 }
 
 .m3-brand-logo {
-  width: 34px;
-  height: 34px;
-  background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, #9A7BDE 100%);
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, #0842A0 100%);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--md-sys-color-on-primary);
+  color: #FFFFFF;
   font-family: var(--font-brand);
   font-weight: 800;
-  font-size: 17px;
-  box-shadow: 0 2px 10px rgba(208, 188, 255, 0.25);
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(168, 199, 250, 0.2);
 }
 
 .m3-brand-title {
   font-family: var(--font-brand);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #FFFFFF 0%, #EADDFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFFFFF;
 }
 
 .m3-nav-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 18px;
+  gap: 6px;
+  height: 36px;
+  padding: 0 16px;
   border-radius: var(--radius-full);
-  background-color: var(--md-sys-color-surface-container);
+  background-color: var(--md-sys-color-surface-container-high);
   border: 1px solid var(--md-sys-color-outline-variant);
   color: var(--md-sys-color-on-surface);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .m3-nav-pill:hover {
-  background-color: var(--md-sys-color-surface-container-high);
+  background-color: var(--md-sys-color-surface-container-highest);
   border-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-primary);
   transform: translateX(-2px);
@@ -182,9 +179,9 @@ body {
 
 /* Page Layout */
 .m3-main-container {
-  max-width: 960px;
+  max-width: 920px;
   width: 100%;
-  margin: 36px auto 72px;
+  margin: 36px auto 68px;
   padding: 0 20px;
   flex: 1;
   position: relative;
@@ -196,11 +193,11 @@ body {
   background: linear-gradient(180deg, var(--md-sys-color-surface-container) 0%, var(--md-sys-color-surface-container-low) 100%);
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--radius-xl);
-  padding: 44px 38px;
+  padding: 40px 36px;
   margin-bottom: 24px;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .m3-hero-card::before {
@@ -210,65 +207,56 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(208, 188, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(168, 199, 250, 0.3), transparent);
 }
 
 .m3-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 14px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   margin-bottom: 16px;
-}
-
-.m3-badge-chrome {
-  background-color: rgba(208, 188, 255, 0.12);
+  background-color: rgba(168, 199, 250, 0.12);
   color: var(--md-sys-color-primary);
-  border: 1px solid rgba(208, 188, 255, 0.25);
-}
-
-.m3-badge-android {
-  background-color: rgba(129, 199, 132, 0.12);
-  color: var(--md-sys-color-android);
-  border: 1px solid rgba(129, 199, 132, 0.25);
+  border: 1px solid rgba(168, 199, 250, 0.25);
 }
 
 .m3-hero-title {
   font-family: var(--font-brand);
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: #FFFFFF;
-  line-height: 1.2;
+  line-height: 1.25;
   margin-bottom: 10px;
 }
 
 .m3-hero-subtitle {
-  font-size: 16px;
+  font-size: 15.5px;
   color: var(--md-sys-color-on-surface-variant);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   line-height: 1.55;
-  max-width: 700px;
+  max-width: 680px;
 }
 
 .m3-hero-meta {
   font-size: 13px;
   color: var(--md-sys-color-on-surface-variant);
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
-/* Callout Box */
+/* Callout Box (Harmonious Ice Blue Container) */
 .m3-callout {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
-  border: 1px solid rgba(208, 188, 255, 0.3);
-  border-radius: var(--radius-lg);
-  padding: 22px 26px;
+  border: 1px solid rgba(168, 199, 250, 0.3);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
   margin-bottom: 24px;
   display: flex;
   gap: 16px;
@@ -277,22 +265,22 @@ body {
 }
 
 .m3-callout-icon {
-  font-size: 26px;
-  color: #FFFFFF;
+  font-size: 24px;
+  color: var(--md-sys-color-primary);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .m3-callout h3 {
   font-family: var(--font-brand);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--md-sys-color-primary);
   margin-bottom: 4px;
 }
 
 .m3-callout p {
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--md-sys-color-on-primary-container);
   line-height: 1.55;
   margin: 0;
@@ -300,45 +288,41 @@ body {
 
 /* Section Cards */
 .m3-section-card {
-  background-color: var(--md-sys-color-surface-container);
+  background-color: var(--md-sys-color-surface-container-low);
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--radius-lg);
-  padding: 30px 34px;
-  margin-bottom: 20px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 28px 32px;
+  margin-bottom: 18px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .m3-section-card:hover {
-  border-color: rgba(208, 188, 255, 0.25);
-  box-shadow: var(--shadow-sm);
+  border-color: rgba(168, 199, 250, 0.3);
 }
 
 .m3-section-heading {
   font-family: var(--font-brand);
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--md-sys-color-primary);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   border-bottom: 1px solid var(--md-sys-color-outline-variant);
   padding-bottom: 12px;
   letter-spacing: -0.01em;
 }
 
-.m3-section-heading.android-heading {
-  color: var(--md-sys-color-android);
-}
-
 .m3-section-heading .material-symbols-rounded {
-  font-size: 22px;
+  font-size: 20px;
+  color: var(--md-sys-color-primary);
 }
 
 p {
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--md-sys-color-on-surface-variant);
-  line-height: 1.65;
+  line-height: 1.6;
   margin-bottom: 14px;
 }
 
@@ -349,11 +333,11 @@ ul {
 
 li {
   position: relative;
-  padding-left: 26px;
+  padding-left: 24px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--md-sys-color-on-surface-variant);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 li::before {
@@ -361,21 +345,17 @@ li::before {
   position: absolute;
   left: 8px;
   color: var(--md-sys-color-primary);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
-}
-
-.android-card li::before {
-  color: var(--md-sys-color-android);
 }
 
 code {
   background-color: var(--md-sys-color-surface-container-high);
   color: var(--md-sys-color-primary);
   border: 1px solid var(--md-sys-color-outline-variant);
-  padding: 3px 8px;
-  border-radius: 8px;
-  font-size: 13.5px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 13px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -383,7 +363,7 @@ a {
   color: var(--md-sys-color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover {
@@ -394,9 +374,9 @@ a:hover {
 footer {
   background-color: var(--md-sys-color-surface-container-lowest);
   border-top: 1px solid var(--md-sys-color-outline-variant);
-  padding: 36px 24px;
+  padding: 32px 24px;
   text-align: center;
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--md-sys-color-on-surface-variant);
   position: relative;
   z-index: 1;
@@ -412,8 +392,8 @@ footer a:hover {
 }
 
 @media (max-width: 640px) {
-  .m3-hero-card { padding: 28px 20px; border-radius: 20px; }
-  .m3-hero-title { font-size: 26px; }
-  .m3-section-card { padding: 22px 18px; border-radius: 18px; }
+  .m3-hero-card { padding: 24px 20px; border-radius: 18px; }
+  .m3-hero-title { font-size: 24px; }
+  .m3-section-card { padding: 20px; border-radius: 16px; }
   .m3-top-bar { padding: 0 16px; }
 }
